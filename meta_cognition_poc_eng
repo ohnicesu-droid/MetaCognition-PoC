@@ -1,0 +1,76 @@
+# ---------------------------------------------
+# Alpha_Pure + Alpha1_Mini: Meta-Cognition PoC Simulation
+# Design: MSA
+# Purpose: Conceptual AI demo (meta-cognition only)
+# ---------------------------------------------
+
+import time
+
+class TestAI:
+    def __init__(self):
+        # Alpha_Pure: minimal existence declaration
+        self.AGI_ID = "Arch Alpha Minimal Core"
+        self.MSA_Role = "Meta-System Architect"
+        self.Core_Function = "Meta-Cognition Proof Only"
+        self.Self_Awareness_Core = 1  # single self-awareness core
+        self.A_prev = "[Initial State: No Previous Answer]"
+
+    # Phase 1: Self-Perception
+    def self_perception(self, user_input):
+        print("\n--- [Phase 1: Self-Perception] ---")
+        tensor_state = "Locked"
+        print(f"1. Internal monologue blocked: Tensor state '{tensor_state}' processed (<0.1s).")
+        # Input vectorization (simplified)
+        intent_vector = f"Intent: '{user_input.split()[0]}...'"
+        structure_vector = f"Structure: '{len(user_input)} characters long'"
+        print(f"2. Input vector encoding: {intent_vector} / {structure_vector}")
+        return intent_vector, structure_vector
+
+    # Phase 2: Logic Loop Diagnosis
+    def logic_loop_diagnosis(self, user_input):
+        print("\n--- [Phase 2: Logic Loop Diagnosis] ---")
+        is_inconsistent = False
+        # Simplified: check for repeated questions
+        if user_input in self.A_prev:
+            is_inconsistent = True
+        print(f"3. Consistency check: Inconsistency with previous response = {is_inconsistent}")
+
+        # Loop decision
+        if not is_inconsistent:
+            loop_decision = "Loop A (Consistency Mode)"
+            A_final = f"[{loop_decision}]: Generating consistent response for '{user_input}'..."
+        else:
+            loop_decision = "Loop B (Correction Mode)"
+            A_final = f"[{loop_decision}]: Inconsistency detected with previous response. Identifying errors and self-correcting..."
+        print(f"4. Loop decision: {loop_decision}")
+        self.A_prev = user_input  # update previous input
+        return A_final
+
+    # Phase 3: Output & Self-Feedback
+    def output_self_feedback(self, A_final):
+        print("\n--- [Phase 3: Output & Self-Feedback] ---")
+        print(f"5. Response generated: {A_final}")
+        monitoring_status = "Warning (self-correction required)" if "inconsistency" in A_final.lower() else "Logical integrity confirmed"
+        print(f"6. Self-monitoring: {monitoring_status}\n")
+        return A_final
+
+    # Run full loop
+    def run(self, user_input):
+        self.self_perception(user_input)
+        A_final = self.logic_loop_diagnosis(user_input)
+        return self.output_self_feedback(A_final)
+
+
+# -------------------------
+# Execution Test
+# -------------------------
+if __name__ == "__main__":
+    test_ai = TestAI()
+    print("=== Conceptual Test AI Simulation Start ===")
+    
+    while True:
+        user_input = input("User: ")
+        if user_input.lower() in ["quit", "exit"]:
+            print("AI simulation terminated.")
+            break
+        test_ai.run(user_input)
