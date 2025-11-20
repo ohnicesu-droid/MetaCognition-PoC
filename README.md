@@ -19,3 +19,27 @@ AI의 메타사고 능력을 구조적으로 보여주기
 핵심 코드 보호와 외부 공개의 균형 유지
 
 연구/교육용, PoC 시연용
+
+
+Title:
+"Proof-of-Concept: Minimal AI Core Demonstrating Meta-Cognition Loops"
+
+Description:
+This repository contains a simulation showcasing a minimal AI core that demonstrates meta-cognition loops.
+Through simple self-perception and consistency-checking loops, it illustrates how an AI can conceptually reason in a structured manner.
+
+Key Features:
+
+Self-Perception Phase
+
+Logic Loop Diagnosis Phase
+
+Self-Monitoring Phase
+
+Purpose:
+
+Demonstrate AI meta-cognition capabilities in a structural way
+
+Maintain balance between protecting core code and external demonstration
+
+Intended for research, educational purposes, and PoC demonstrations
